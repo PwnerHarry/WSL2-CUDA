@@ -28,11 +28,14 @@ wsl --set-default-version 2
 ```
 
 ## GET Ubuntu READY w/ NVIDIA Support
+
 Visit the page to get the WSL compatible NVIDIA driver:https://developer.nvidia.com/cuda/wsl/download
+
 NOTE: **mindless updates to the driver may cause trouble**
 
 Use this link to install Windows Terminal from the Store:
 https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
+
 Use this link to install Ubuntu 18.04 LTS as a Windows Store App:
 https://www.microsoft.com/store/apps/9N9TNGVNDL3Q
 
@@ -44,47 +47,61 @@ Run Windows Terminal. Use the downward arrow button to initialize a terminal wit
 `cd` to the folder where the `.sh` files are at.
 
 Install `dos2unix` in case of any trouble:
+
 ```bash
 sudo apt install dos2unix
 ```
+
 Then convert the `.sh` files to unix encoding:
+
 ```bash
 dos2unix *.sh
 ```
 
 Get CUDA, CuDNN and python-3.8 configured by:
+
 ```bash
 sudo bash WSL2_init.sh
 ```
+
 Key-in your password. This would install cuda 10.2 and 11.2 with their corresponding cudnns. Modify to suit your needs.
 
 ### OPTIONAL: GET TensorFlow and PyTorch in a virtual Python environment
+
 Optionally, create a virtual environment at `~/ENV/` by
+
 ```bash
 bash WSL2_python.sh
 ```
+
 No `sudo` this time. Then:
+
 ```bash
 source ~/ENV/bin/activate
 pip install --upgrade pip
 pip install --upgrade tensorflow # get tensorflow + cuda 11
 pip install torch torchvision torchaudio # get pytorch + cuda 10.2
 ```
-Change the corresponding versions of cuda for the libraries if you would like.
-Test by
+
+Change the corresponding versions of cuda for the libraries if you would like. Test with:
+
 ```bash
 source ~/ENV/bin/activate
 python
 ```
-When in Python
+
+When in Python:
+
 ```python
 import tensorflow as tf, torch
 tf.zeros(1)
 torch.zeros(1).cuda()
 ```
+
 Check for errors. If none, enjoy!
 
 ### BONUS: for tensorflow's `libcusolver.so.11 not found` error
+
 ```bash
 sudo ln -s /usr/local/cuda-11.2/targets/x86_64-linux/lib/libcusolver.so.11 ~/ENV/lib/python3.8/site-packages/tensorflow/python/libcusolver.so.11
 ```
