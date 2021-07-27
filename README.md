@@ -8,57 +8,57 @@ https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 **ENSURE THAT YOUR WINDOWS VERSION IS SUPPORTED**
 
-Open PowerShell as Administrator and run:
+- [ ] Open PowerShell as Administrator and run:
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-You may also need to enable Hyper-V by:
+- [x] You may also need to enable Hyper-V by:
 1. Right-clicking uninstall on any classic programs installed, which will jump you to the classic programs & functionalities panel.
 2. Look to the left. Click on "Activate or Deactivate Windows Functionalities"
 3. Tick Hyper-V and Apply.
 
-Restart your Windows!
+- [ ] Restart your Windows!
 
-Download and install the update from: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+- [ ] Download and install the update from: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-Open PowerShell as Administrator and run:
+- [ ] Open PowerShell as Administrator and run:
 ```powershell
 wsl --set-default-version 2
 ```
 
 ## GET Ubuntu READY w/ NVIDIA Support
 
-Visit the page to get the WSL compatible NVIDIA driver:https://developer.nvidia.com/cuda/wsl/download
+ - [ ] Visit the page to get and install the WSL compatible NVIDIA driver:https://developer.nvidia.com/cuda/wsl/download
 
 NOTE: **mindless updates to the driver may cause trouble**
 
-Use this link to install Windows Terminal from the Store:
+- [ ] Use this link to install Windows Terminal from the Store:
 https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
 
-Use this link to install Ubuntu 18.04 LTS as a Windows Store App:
+- [ ] Use this link to install Ubuntu 18.04 LTS as a Windows Store App:
 https://www.microsoft.com/store/apps/9N9TNGVNDL3Q
 
 After Ubuntu installation, initialize the system by clicking on the Ubuntu application icon in the Start menu.
 
 With the help of the navigation panel on the left of Explorer, clone the sh files in this repo to somewhere inside your created `/home/`.
 
-Run Windows Terminal. Use the downward arrow button to initialize a terminal with Ubuntu.
-`cd` to the folder where the `.sh` files are at.
+- [ ] Run Windows Terminal. Use the downward arrow button to initialize a terminal with Ubuntu.
+- [ ] `cd` to the folder where the `.sh` files are at.
 
-Install `dos2unix` in case of any trouble:
+- [ ] Install `dos2unix` in case of any trouble:
 
 ```bash
 sudo apt install dos2unix
 ```
 
-Then convert the `.sh` files to unix encoding:
+- [ ] Then convert the `.sh` files to unix encoding:
 
 ```bash
 dos2unix *.sh
 ```
 
-Get CUDA, CuDNN and python-3.8 configured by:
+- [ ] Get CUDA, CuDNN and python-3.8 configured by:
 
 ```bash
 sudo bash WSL2_init.sh
