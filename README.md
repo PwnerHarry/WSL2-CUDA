@@ -4,7 +4,7 @@
 
 ## GET WSL2 READY
 Check the official blog first:
-https://docs.microsoft.com/en-us/windows/wsl/install-
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 **ENSURE THAT YOUR WINDOWS VERSION IS SUPPORTED**
 
