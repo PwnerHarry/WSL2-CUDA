@@ -49,6 +49,7 @@ With the help of the navigation panel on the left of Explorer, clone the sh file
 - [ ] Install `dos2unix` in case of any trouble:
 
 ```bash
+sudo apt update # do this in case apt cannot find dos2unix
 sudo apt install dos2unix
 ```
 
@@ -100,7 +101,7 @@ torch.zeros(1).cuda()
 
 Check for errors. If none, enjoy!
 
-### BONUS: for tensorflow's `libcusolver.so.11 not found` error
+### BONUS: for tensorflow's `libcusolver.so.11 not found` error, don't apply if not encountered
 
 ```bash
 sudo ln -s /usr/local/cuda-11.2/targets/x86_64-linux/lib/libcusolver.so.11 ~/ENV/lib/python3.8/site-packages/tensorflow/python/libcusolver.so.11
