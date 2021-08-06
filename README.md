@@ -1,6 +1,6 @@
 # Configure Deep Learning Environment with WSL2
 
-### Last Update: 27 July 2021
+### Last Update: 6 August 2021
 
 ## GET WSL2 READY
 Check the official blog first:
@@ -26,6 +26,21 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ```powershell
 wsl --set-default-version 2
 ```
+
+- [ ] Config the WSL config file such that it could use all the CPU and Memory
+```powershell
+wsl --shutdown # shutdown wsl first
+notepad "$env:USERPROFILE/.wslconfig" # edit or create the config with notepad
+```
+
+In the Notepad window, inject these lines:
+```
+[wsl2]
+memory=128GB   # Limits VM memory in WSL2 up to 128GB
+processors=32 # Makes the WSL2 VM use 32 virtual processors
+```
+
+Save the file and exit
 
 ## GET Ubuntu READY w/ NVIDIA Support
 
