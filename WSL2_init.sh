@@ -8,4 +8,4 @@ apt install -y cuda-toolkit-11-2 cuda-toolkit-10-2
 apt install -y libcudnn7=7.*-1+cuda10.2
 apt install -y libcudnn8=8.*-1+cuda11.2
 
-apt install -y python3.8 python3.8-dev python3.8-venv python3.8-distutils python3.8-pip
+apt install -y python3.8 python3.8-dev python3.8-venv python3.8-distutils
