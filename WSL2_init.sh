@@ -9,3 +9,5 @@ apt install -y libcudnn7=7.*-1+cuda10.2
 apt install -y libcudnn8=8.*-1+cuda11.2
 
 apt install -y python3.8 python3.8-dev python3.8-venv python3.8-distutils
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3.8 get-pip.py
