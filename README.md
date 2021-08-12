@@ -1,6 +1,6 @@
 # Configure Deep Learning Environment with WSL2
 
-### Last Update: 6 August 2021
+### Last Update: 12 August 2021
 
 ## GET WSL2 READY
 Check the official blog first:
