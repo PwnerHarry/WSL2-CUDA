@@ -44,7 +44,8 @@ Save the file and exit
 
 ## GET Ubuntu READY w/ NVIDIA Support
 
- - [ ] Visit the page to get and install the WSL compatible NVIDIA driver:https://developer.nvidia.com/cuda/wsl/download
+ - [ ] Visit the page to get and install the WSL compatible NVIDIA driver:
+ https://developer.nvidia.com/cuda/wsl/download
 
 NOTE: **mindless updates to the driver may cause trouble**
 
