@@ -1,6 +1,6 @@
 # Configure Deep Learning Environment with WSL2
 
-### Last Update: 9 September 2021
+### Last Update: 30 September 2021
 
 ## GET WSL2 READY
 Check the official blog first:
@@ -72,7 +72,8 @@ sudo apt install dos2unix
 - [ ] Then convert the `.sh` files to unix encoding:
 
 ```bash
-dos2unix *.sh
+sudo chmod 777 *.sh
+sudo dos2unix *.sh
 ```
 
 - [ ] Get CUDA, CuDNN and python-3.8 configured by:
