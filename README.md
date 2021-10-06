@@ -1,4 +1,4 @@
-# Configure Deep Learning Environment with Windows 11 + WSL2
+# Deep Learning Environment with Windows 11 + WSL2
 
 ### Last Update: 6 October 2021
 
