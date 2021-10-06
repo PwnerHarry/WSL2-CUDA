@@ -21,14 +21,14 @@ wsl --shutdown # shutdown wsl first
 notepad "$env:USERPROFILE/.wslconfig" # edit or create the config with notepad
 ```
 
-In the Notepad window, inject these lines:
+- [ ] In the Notepad window, inject these lines:
 ```
 [wsl2]
 memory=128GB   # Limits VM memory in WSL2 up to 128GB
 processors=32 # Makes the WSL2 VM use 32 virtual processors
 ```
 
-Save the file and exit
+- [ ] Save the notepad file and exit
 
 ## GET Ubuntu READY w/ NVIDIA Support
 
