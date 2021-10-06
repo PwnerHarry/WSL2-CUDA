@@ -1,31 +1,19 @@
-# Configure Deep Learning Environment with WSL2
+# Configure Deep Learning Environment with Windows 11 + WSL2
 
-### Last Update: 30 September 2021
+### Last Update: 6 October 2021
 
 ## GET WSL2 READY
-Check the official blog first:
+- [ ] Check the official blog first:
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
-**ENSURE THAT YOUR WINDOWS VERSION IS SUPPORTED**
+- [ ] Open Windows Terminal as Administrator (Win + X) and run in PowerShell:
 
-- [ ] Open PowerShell as Administrator and run:
 ```powershell
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-```
-- [x] You may also need to enable Hyper-V by:
-1. Right-clicking uninstall on any classic programs installed, which will jump you to the classic programs & functionalities panel.
-2. Look to the left. Click on "Activate or Deactivate Windows Functionalities"
-3. Tick Hyper-V and Apply.
-
-- [ ] Restart your Windows!
-
-- [ ] Download and install the update from: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-
-- [ ] Open PowerShell as Administrator and run:
-```powershell
+wsl --install -d Ubuntu-20.04
 wsl --set-default-version 2
 ```
+
+This will automatically install the dependencies as well as Ubuntu-20.04 LTS
 
 - [ ] Config the WSL config file such that it could use all the CPU and Memory
 ```powershell
@@ -49,13 +37,9 @@ Save the file and exit
 
 NOTE: **mindless updates to the driver may cause trouble**
 
-- [ ] Use this link to install Windows Terminal from the Store:
-https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701
+- [ ] Restart your PC
 
-- [ ] Use this link to install Ubuntu 18.04 LTS as a Windows Store App:
-https://www.microsoft.com/store/apps/9N9TNGVNDL3Q
-
-After Ubuntu installation, initialize the system by clicking on the Ubuntu application icon in the Start menu.
+After Ubuntu installation, initialize the system by clicking on the Ubuntu 20.04 application icon in the Start menu.
 
 With the help of the navigation panel on the left of Explorer, clone the sh files in this repo to somewhere inside your created `/home/`.
 
@@ -98,7 +82,7 @@ No `sudo` this time. Then:
 source ~/ENV/bin/activate
 pip install --upgrade pip
 pip install --upgrade tensorflow # get tensorflow + cuda 11
-pip install torch torchvision torchaudio # get pytorch + cuda 10.2
+pip3 install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html # get pytorch + cuda 11
 ```
 
 Change the corresponding versions of cuda for the libraries if you would like. Test with:
