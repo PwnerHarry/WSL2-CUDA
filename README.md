@@ -1,6 +1,6 @@
 # Deep Learning Environment with Windows 11 + WSL2
 
-### Last Update: 6 October 2021
+### Last Update: 6 December 2021
 
 ## GET WSL2 READY
 - [ ] Check the official blog first:
@@ -82,7 +82,8 @@ No `sudo` this time. Then:
 source ~/ENV/bin/activate
 pip install --upgrade pip
 pip install --upgrade tensorflow # get tensorflow + cuda 11
-pip3 install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html # get pytorch + cuda 11
+pip install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio==0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
+ # get pytorch + cuda 11
 ```
 
 Change the corresponding versions of cuda for the libraries if you would like. Test with:
@@ -99,7 +100,6 @@ import tensorflow as tf, torch
 tf.zeros(1)
 torch.zeros(1).cuda()
 ```
-
 Check for errors. If none, enjoy!
 
 ### BONUS: for tensorflow's `libcusolver.so.11 not found` error, don't apply if not encountered

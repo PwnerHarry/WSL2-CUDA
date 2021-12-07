@@ -15,7 +15,6 @@ apt-mark hold libcudnn8-dev
 # apt-mark hold libcudnn7
 # apt-mark hold libcudnn7-dev
 
-
 apt install -y python3.8 python3.8-dev python3.8-venv python3.8-distutils
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3.8 get-pip.py
